@@ -1,11 +1,15 @@
 # openshift
 openshift projets
 
-## install in standlone monde
+## install in standlone mode
 
-In Centos server
+In Centos server install packages and start
 
+```
 yum install wget docker NetworkManager -y
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
+```
 
 ### install ansible 2.7 (via RPM)
 
