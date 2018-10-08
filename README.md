@@ -15,6 +15,18 @@ sudo yum install ansible-2.7.0-1.el7.ans.noarch.rpm
 
 ### install Openshift
 
+Add origin repo
+
+```
+sudo wget https://storage.googleapis.com/origin-ci-test/releases/openshift/origin/master/origin.repo -O /etc/yum.repos.d/orign.repo
+```
+
+install
+
+```
 git clone https://github.com/openshift/openshift-ansible
 cd openshift-ansible
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
+```
+
+
