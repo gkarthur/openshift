@@ -6,7 +6,9 @@ openshift projets
 In Centos server install packages and start
 
 ```
-sudo yum install wget docker NetworkManager -y
+sudo yum -y install epel-release
+
+sudo yum install wget git docker ansible NetworkManager -y
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ```
