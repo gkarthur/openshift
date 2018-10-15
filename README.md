@@ -6,7 +6,7 @@ openshift projets
 In Centos server install packages and start
 
 ```
-yum install wget docker NetworkManager -y
+sudo yum install wget docker NetworkManager -y
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ```
