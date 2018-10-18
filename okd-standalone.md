@@ -36,7 +36,15 @@ $ oc login -u origin -p origin https://console.ec2-18-221-144-190.us-east-2.comp
 Login successful.
 ```
 
+## OKD with OC cluster up
 
+```
+sudo yum update -y
+sudo yum install docker -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo ./oc cluster up --skip-registry-check=true
+```
 
 
 
