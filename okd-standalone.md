@@ -43,7 +43,10 @@ sudo yum update -y
 sudo yum install docker -y
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo ./oc cluster up --skip-registry-check=true
+wget ...
+tar -xvf
+cd openshiftt
+sudo ./oc cluster up --public-hostname=172.31.27.33 --skip-registry-check=true 
 ```
 
 
