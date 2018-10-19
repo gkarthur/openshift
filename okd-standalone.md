@@ -38,19 +38,31 @@ Login successful.
 
 ## OKD with OC cluster up
 
+### installation
+
 ```
 sudo yum update -y
 sudo yum install docker -y
 sudo systemctl start docker
 sudo systemctl enable docker
-wget ...
-tar -xvf
-cd openshiftt
-sudo ./oc cluster up --public-hostname=172.31.27.33 --skip-registry-check=true 
+wget https://github.com/openshift/origin/releases/download/v3.11.0/openshift-origin-server-v3.11.0-0cbc58b-linux-64bit.tar.gz
+tar -xvf openshift-origin-server-v3.11.0-0cbc58b-linux-64bit.tar.gz
+mv openshift-origin-server-v3.11.0-0cbc58b-linux-64bit openshift 
 ```
 
+### start server
 
+```
+cd openshiftt
+sudo ./oc cluster up --public-hostname=ec2-18-221-202-74.us-east-2.compute.amazonaws.com --skip-registry-check=true
+```
 
+### stop server
+
+```
+cd openshiftt
+sudo ./oc cluster down
+```
 
 
 
