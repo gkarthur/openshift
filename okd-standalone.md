@@ -50,11 +50,27 @@ tar -xvf openshift-origin-server-v3.11.0-0cbc58b-linux-64bit.tar.gz
 mv openshift-origin-server-v3.11.0-0cbc58b-linux-64bit openshift 
 ```
 
+### configuration
+
+Modify file /etc/docker/daemon.json with content below, then restart Docker
+
+```
+{
+  "insecure-registries" : ["172.30.0.0/16"]
+}
+```
+
+Restart docker service
+
+```
+sudo systemctl restart docker
+```
+
 ### start server
 
 ```
 cd openshiftt
-sudo ./oc cluster up --public-hostname=$(hostname) --skip-registry-check=true
+sudo ./oc cluster up --public-hostname=$(hostname)
 ```
 
 ### stop server
