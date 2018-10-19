@@ -73,6 +73,13 @@ cd openshiftt
 sudo ./oc cluster up --public-hostname=$(hostname)
 ```
 
+### Create application
+
+sudo ./oc login -u system:admin
+sudo ./oc get all
+sudo ./oc new-app --name=mytest wildfly:latest~https://github.com/Preeticp/os-sample-java-web
+
+
 ### stop server
 
 ```
