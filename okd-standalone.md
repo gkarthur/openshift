@@ -6,7 +6,7 @@ Search and select Centos in instances repository
 Select t2.large for the test purpose
 Lanch instance
 
-## install OKD
+## install OKD with ansible
 
 connect with ssh key on ec2 instance, and run following command
 
@@ -36,7 +36,7 @@ $ oc login -u origin -p origin https://console.ec2-18-221-144-190.us-east-2.comp
 Login successful.
 ```
 
-## OKD with OC cluster up
+## install OKD with OC cluster up
 
 ### installation
 
