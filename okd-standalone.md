@@ -54,7 +54,7 @@ mv openshift-origin-server-v3.11.0-0cbc58b-linux-64bit openshift
 
 ```
 cd openshiftt
-sudo ./oc cluster up --public-hostname=ec2-18-221-202-74.us-east-2.compute.amazonaws.com --skip-registry-check=true
+sudo ./oc cluster up --public-hostname=$(hostname) --skip-registry-check=true
 ```
 
 ### stop server
